@@ -1,8 +1,9 @@
+import pyttsx3
 import streamlit as st
 import pandas as pd
 import random
 import time
-import pyttsx3
+
 
 # Load CSV file (assuming 'verbs.csv' contains Romaji, Kana, and Meaning columns)
 df = pd.read_csv('verbs.csv')
