@@ -1,0 +1,6 @@
+streamlit 
+pandas 
+gtts 
+pydub
+PyAudio
+distutils-pytest
