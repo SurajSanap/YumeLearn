@@ -4,3 +4,4 @@ gtts
 pydub
 PyAudio
 distutils-pytest
+pyttsx3
