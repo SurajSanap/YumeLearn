@@ -1,9 +1,9 @@
-
 import streamlit as st
 import pandas as pd
 import random
 import time
-import pyttsx3
+from gtts import gTTS
+import os
 
 # Load CSV file (assuming 'verbs.csv' contains Romaji, Kana, and Meaning columns)
 df = pd.read_csv('verbs.csv')
@@ -46,14 +46,12 @@ def speak_and_display_word(word, option):
             speak_word = word['Meaning']
             meaning = word['Romaji']
 
-    
     # Speak and display the Romaji or Meaning based on the option selected
     st.markdown(f'<div class="custom-text">{display_word}</div>', unsafe_allow_html=True)
-    engine.say(display_word)
     
-    engine.say(meaning)
-    time.sleep(2)
-    engine.runAndWait()
+    tts = gTTS(display_word)
+    tts.save("output.mp3")
+    os.system("mpg321 output.mp3")
     time.sleep(2)  # Keep the word displayed for 2 seconds
 
     # Clear previous text after 2 seconds
@@ -83,9 +81,6 @@ if st.button("Guess Meaning"):
     words = df.to_dict('records')
     random.shuffle(words)
 
-    # Initialize pyttsx3 engine
-    engine = pyttsx3.init()
-    
     for word in words:
         # Speak and display the word
         speak_and_display_word(word, option)
