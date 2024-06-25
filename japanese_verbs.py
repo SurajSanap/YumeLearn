@@ -2,13 +2,10 @@ import streamlit as st
 import pandas as pd
 import random
 import time
-try:
-    from gtts import gTTS
-    print("gTTS is installed and can be imported successfully.")
-except ImportError as e:
-    print("Error: gTTS cannot be imported.")
-    print(e)
-import os
+from gtts import gTTS
+from pydub import AudioSegment
+from pydub.playback import play
+import io
 
 # Load CSV file (assuming 'verbs.csv' contains Romaji, Kana, and Meaning columns)
 df = pd.read_csv('verbs.csv')
@@ -55,8 +52,11 @@ def speak_and_display_word(word, option):
     st.markdown(f'<div class="custom-text">{display_word}</div>', unsafe_allow_html=True)
     
     tts = gTTS(display_word)
-    tts.save("output.mp3")
-    os.system("mpg321 output.mp3")
+    audio_fp = io.BytesIO()
+    tts.write_to_fp(audio_fp)
+    audio_fp.seek(0)
+    audio = AudioSegment.from_file(audio_fp, format="mp3")
+    play(audio)
     time.sleep(2)  # Keep the word displayed for 2 seconds
 
     # Clear previous text after 2 seconds
