@@ -1,8 +1,7 @@
-pyttsx3
-streamlit 
-pandas 
-gtts 
+streamlit
+pandas
+gtts
 pydub
 PyAudio
 distutils-pytest
-pyttsx3
+mpg321
