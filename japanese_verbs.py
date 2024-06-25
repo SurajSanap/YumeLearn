@@ -2,7 +2,12 @@ import streamlit as st
 import pandas as pd
 import random
 import time
-from gtts import gTTS
+try:
+    from gtts import gTTS
+    print("gTTS is installed and can be imported successfully.")
+except ImportError as e:
+    print("Error: gTTS cannot be imported.")
+    print(e)
 import os
 
 # Load CSV file (assuming 'verbs.csv' contains Romaji, Kana, and Meaning columns)
