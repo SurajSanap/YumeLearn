@@ -4,5 +4,5 @@ pandas
 pydub
 PyAudio
 distutils-pytest
-mpg321
+
 edge-tts
