@@ -2,10 +2,11 @@ import streamlit as st
 import pandas as pd
 import random
 import time
-from gtts import gTTS
+import edge_tts
+import asyncio
+import tempfile
 from pydub import AudioSegment
 from pydub.playback import play
-import io
 
 # Load CSV file (assuming 'verbs.csv' contains Romaji, Kana, and Meaning columns)
 df = pd.read_csv('verbs.csv')
@@ -29,7 +30,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Function to speak and display the word
-def speak_and_display_word(word, option):
+async def speak_and_display_word(word, option):
     if option == "Romaji":
         display_word = word['Romaji']
         speak_word = word['Romaji']
@@ -51,12 +52,20 @@ def speak_and_display_word(word, option):
     # Speak and display the Romaji or Meaning based on the option selected
     st.markdown(f'<div class="custom-text">{display_word}</div>', unsafe_allow_html=True)
     
-    tts = gTTS(display_word)
-    audio_fp = io.BytesIO()
-    tts.write_to_fp(audio_fp)
-    audio_fp.seek(0)
-    audio = AudioSegment.from_file(audio_fp, format="mp3")
+    # Using edge-tts for text-to-speech
+    communicate = edge_tts.Communicate()
+    tts_stream = await communicate.tts(speak_word)
+    temp_audio_file = tempfile.NamedTemporaryFile(delete=False, suffix=".mp3")
+    
+    with open(temp_audio_file.name, "wb") as f:
+        async for chunk in tts_stream:
+            if chunk:
+                f.write(chunk)
+    
+    audio = AudioSegment.from_file(temp_audio_file.name)
     play(audio)
+    temp_audio_file.close()
+
     time.sleep(2)  # Keep the word displayed for 2 seconds
 
     # Clear previous text after 2 seconds
@@ -88,7 +97,7 @@ if st.button("Guess Meaning"):
 
     for word in words:
         # Speak and display the word
-        speak_and_display_word(word, option)
+        asyncio.run(speak_and_display_word(word, option))
 
         # Execute JavaScript to scroll to the bottom of the page after 3 seconds
         scroll_button.markdown("""
