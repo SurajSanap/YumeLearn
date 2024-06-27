@@ -1,8 +1,6 @@
 streamlit
 pandas
-
 pydub
 PyAudio
 distutils-pytest
-
 edge-tts
