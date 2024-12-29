@@ -28,7 +28,7 @@ def render_katakana_page():
     st.markdown(
         """
         <footer style="position: fixed; bottom: 0; width: 100%; background-color: #2c2f33; color: white; text-align: center; padding: st.query_params;">
-            © 2024 Suraj Sanap Project
+            © 2024 YumeLearn Project
         </footer>
         """,
         unsafe_allow_html=True,
