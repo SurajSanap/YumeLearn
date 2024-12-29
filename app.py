@@ -20,13 +20,19 @@ def load_animation(file_path):
 
 # Main function
 def main():
-    # Display title
-    st.title("Welcome to YumeLearn!")
+   
 
     # Display Lottie animation for welcome
     animation_data = load_animation("assets/Animation.json")
     if animation_data:
         st_lottie(animation_data, height=200, key="welcome_animation")
+  
+    # Center-aligned title using columns
+    col1, col2, col3 = st.columns([1, 6, 1])  # Adjust column width ratios
+    with col2:  # Center column
+        st.image("assets\YumeLeran Logo.png")
+
+  
 
     # Sidebar
     with st.sidebar:

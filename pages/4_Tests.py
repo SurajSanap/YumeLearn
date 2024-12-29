@@ -4,6 +4,8 @@ import json
 import os
 from streamlit_lottie import st_lottie
 
+from app import load_animation
+
 
 st.set_page_config(page_title="YumeLearn", page_icon="assets/jp9.gif", layout="wide", initial_sidebar_state="expanded")
 
@@ -24,7 +26,7 @@ def render_test_page():
 
     # Load and display animation
     try:
-        animation_path = os.path.join("assets", "SakuraAnimation.json")
+        animation_path = os.path.join("assets", "Exam.json")
         with open(animation_path, encoding='utf-8') as anim_source:
             animation_data = json.load(anim_source)
         st_lottie(animation_data, height=300, key="SakuraAnimation")
@@ -98,6 +100,12 @@ def render_test_page():
                         st.session_state.answers = []
                         st.session_state.score = 0
 
+
+    with st.sidebar:
+        sidebar_animation = load_animation("assets/SakuraAnimation.json")
+        if sidebar_animation:
+            st_lottie(sidebar_animation, height=150, key="sidebar_animation")
+            
     # Footer
     st.markdown(
         """

@@ -6,8 +6,6 @@ from streamlit_lottie import st_lottie
 
 st.set_page_config(page_title="YumeLearn", page_icon="assets/jp9.gif", layout="wide", initial_sidebar_state="expanded")
 
-
-
 # Animation Section
 try:
     with open('assets/About.json', encoding='utf-8') as anim_source:
@@ -25,6 +23,41 @@ st.markdown("""
 Hi! I'm **Suraj Sanap**, a passionate developer with expertise in **AI**, **Machine Learning**, and building web applications. 
 I love solving real-world problems using innovative technologies. Here are some of my most exciting projects!
 """)
+
+# Define URLs for GitHub and LinkedIn
+github_url = "https://github.com/SurajSanap"
+linkedin_url = "https://www.linkedin.com/in/SurajSanap01"
+
+st.markdown("### Connect with me:")
+
+# Create two columns
+col1, col2 = st.columns(2)
+
+# GitHub button on the left
+with col1:
+    st.markdown(
+        f"""
+        <a href="{github_url}" target="_blank">
+            <button style="padding: 10px; font-size: 16px; color: white; background-color: #333; border: none; border-radius: 5px; width: 100%;">
+                GitHub
+            </button>
+        </a>
+        """,
+        unsafe_allow_html=True,
+    )
+
+# LinkedIn button on the right
+with col2:
+    st.markdown(
+        f"""
+        <a href="{linkedin_url}" target="_blank">
+            <button style="padding: 10px; font-size: 16px; color: white; background-color: #0072b1; border: none; border-radius: 5px; width: 100%;">
+                LinkedIn
+            </button>
+        </a>
+        """,
+        unsafe_allow_html=True,
+    )
 
 # My Projects Section
 st.header("My Projects")
@@ -75,6 +108,25 @@ for project in projects:
 
 
 
+#Side Bar
+
+
+st.markdown("### Connect with me:")
+
+# Buttons for GitHub and LinkedIn
+with st.sidebar:
+    st.image("assets\SRS.png")
+
+    if st.button("GitHub"):
+        st.write(f"Redirecting to [GitHub Profile]({github_url})...")
+        st.query_params(url=github_url)
+
+    if st.button("LinkedIn"):
+        st.write(f"Redirecting to [LinkedIn Profile]({linkedin_url})...")
+        st.query_params(url=linkedin_url)
+
+
+  
 st.markdown("""
     
 
@@ -108,4 +160,8 @@ st.markdown("""
 	* [Reddit Masterlist](https://www.reddit.com/r/languagelearning/comments/5m5426/discord_language_learning_servers_masterlist/) 
 * [HelloTalk](https://www.hellotalk.com/) - Popular language exchange app.
 
+            
+            
 """)
+
+

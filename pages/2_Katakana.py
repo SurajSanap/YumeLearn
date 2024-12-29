@@ -1,5 +1,9 @@
 import streamlit as st
 import os
+import json
+from streamlit_lottie import st_lottie
+
+from app import load_animation
 
 # Directories for Katakana images and audio
 KATAKANA_IMAGE_DIR = "data/Katakana/Background"
@@ -7,7 +11,7 @@ KATAKANA_AUDIO_DIR = "data/Audio"
 
 
 
-st.set_page_config(page_title="YumeLearn", page_icon="assets/jp9.gif", layout="wide", initial_sidebar_state="expanded")
+#st.set_page_config(page_title="YumeLearn", page_icon="assets/jp9.gif", layout="wide", initial_sidebar_state="expanded")
 
 def render_katakana_page():
     st.title("Katakana Practice")
@@ -23,6 +27,12 @@ def render_katakana_page():
                     show_modal(img)
     else:
         st.error("Katakana images not found.")
+
+    # Sidebar with Lottie animation
+    with st.sidebar:
+        sidebar_animation = load_animation("assets/SakuraAnimation.json")
+        if sidebar_animation:
+            st_lottie(sidebar_animation, height=150, key="sidebar_animation")
 
     
     st.markdown(

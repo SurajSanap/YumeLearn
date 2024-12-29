@@ -1,7 +1,9 @@
 import streamlit as st
 import os
+import json
+from streamlit_lottie import st_lottie
 
-
+from app import load_animation
 
 st.set_page_config(page_title="YumeLearn", page_icon="assets/jp9.gif", layout="wide", initial_sidebar_state="expanded")
 
@@ -39,6 +41,12 @@ def render_kanji_page():
                 st.warning("No Kanji images found for this level.")
         else:
             st.error("The selected JLPT level folder does not exist.")
+
+    #Side bar
+    with st.sidebar:
+        sidebar_animation = load_animation("assets/SakuraAnimation.json")
+        if sidebar_animation:
+            st_lottie(sidebar_animation, height=150, key="sidebar_animation")
 
     
     st.markdown(
