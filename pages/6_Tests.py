@@ -4,12 +4,6 @@ import json
 import os
 from streamlit_lottie import st_lottie
 
-from Home import load_animation
-
-
-st.set_page_config(page_title="YumeLearn", page_icon="assets/jp9.gif", layout="wide", initial_sidebar_state="expanded")
-
-
 # Load the questions from JSON files
 def load_questions(level):
     file_path = f"data/Test/{level}.json"
@@ -20,26 +14,21 @@ def load_questions(level):
         st.error(f"Questions for {level} not found.")
         return []
 
-
 # Render the test page
 def render_test_page():
-
-    # Load and display animation
     try:
-        animation_path = os.path.join("assets", "Exam.json")
-        with open(animation_path, encoding='utf-8') as anim_source:
+        with open('assets\Exam.json', encoding='utf-8') as anim_source:
             animation_data = json.load(anim_source)
-        st_lottie(animation_data, height=300, key="SakuraAnimation")
+        st_lottie(animation_data, 1, True, True, "high", 350, -200)
     except FileNotFoundError:
-        st.error("Animation file not found. Ensure 'assets/SakuraAnimation.json' exists.")
+        st.error("Animation file not found.")
     except UnicodeDecodeError as e:
         st.error(f"Error decoding JSON: {e}. Try specifying a different encoding.")
     except Exception as e:
-        st.error(f"An unexpected error occurred: {e}")
-
+        st.error(f"An error occurred: {e}")
     st.title("JLPT Practice Test")
 
-    # Select JLPT level
+    # Select Test level
     levels = ["n5", "n4", "n3", "n2"]
     selected_level = st.selectbox("Select JLPT Level", levels, key="level_selector")
 
@@ -48,6 +37,9 @@ def render_test_page():
 
     if not questions:
         return
+
+    # Display animation
+    
 
     # Shuffle questions if not already shuffled
     if "shuffled_questions" not in st.session_state or st.session_state.current_level != selected_level:
@@ -64,7 +56,7 @@ def render_test_page():
 
     if question_index < len(st.session_state.shuffled_questions):
         question = st.session_state.shuffled_questions[question_index]
-        st.markdown(f"**Q{question_index + 1}: {question['question']}**")
+        st.write(f"**Q{question_index + 1}: {question['question']}**")
 
         options = question["options"]
         selected_option = st.radio("Select your answer:", options, key=f"q{question_index}")
@@ -79,6 +71,8 @@ def render_test_page():
                 if selected_option == question["answer"]:
                     st.session_state.score += 1
                 st.session_state.show_next = True
+
+        st.write(f"Remaining Questions: {len(st.session_state.shuffled_questions) - question_index - 1}")
 
         if st.session_state.show_next:
             if st.button("Next Question", key=f"next_{question_index}"):
@@ -100,12 +94,18 @@ def render_test_page():
                         st.session_state.answers = []
                         st.session_state.score = 0
 
-
+    # Sidebar
     with st.sidebar:
-        sidebar_animation = load_animation("assets/SakuraAnimation.json")
-        if sidebar_animation:
+        try:
+            sidebar_animation_path = os.path.join("assets", "SakuraAnimation.json")
+            with open(sidebar_animation_path, encoding='utf-8') as anim_source:
+                sidebar_animation = json.load(anim_source)
             st_lottie(sidebar_animation, height=150, key="sidebar_animation")
-            
+        except FileNotFoundError:
+            st.error("Sidebar animation file not found.")
+        except Exception as e:
+            st.error(f"An error occurred: {e}")
+
     # Footer
     st.markdown(
         """
@@ -115,7 +115,6 @@ def render_test_page():
         """,
         unsafe_allow_html=True,
     )
-
 
 # Main
 if __name__ == "__main__":
