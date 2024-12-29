@@ -150,3 +150,4 @@ if st.button("Start Voice Assistant"):
     except RuntimeError as stop_error:
         st.warning(str(stop_error))
         st.write("Voice Assistant stopped due to an error.")
+   
