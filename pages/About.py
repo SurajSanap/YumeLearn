@@ -95,6 +95,7 @@ projects = [
     }
 ]
 
+
 # Display projects in a cleaner format
 for project in projects:
     st.subheader(project["title"])
@@ -117,8 +118,8 @@ st.markdown("### Connect with me:")
 
 # Buttons for GitHub and LinkedIn
 with st.sidebar:
-    st.image("assets\SRS.png")
-
+    st.image("assets/SRS.png")
+    
     if st.button("GitHub"):
         st.write(f"Redirecting to [GitHub Profile]({github_url})...")
         st.query_params(url=github_url)
