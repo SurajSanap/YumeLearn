@@ -34,7 +34,7 @@ def render_test_page():
 
     # Display animation
     try:
-        with open('assets\SakuraAnimation.json', encoding='utf-8') as anim_source:
+        with open('assets\Test.json', encoding='utf-8') as anim_source:
             animation_data = json.load(anim_source)
         st_lottie(animation_data, 1, True, True, "high", 350, -200)
     except FileNotFoundError:
@@ -43,7 +43,7 @@ def render_test_page():
         st.error(f"Error decoding JSON: {e}. Try specifying a different encoding.")
     except Exception as e:
         st.error(f"An error occurred: {e}")
-        
+
 
     # Shuffle questions if not already shuffled
     if "shuffled_questions" not in st.session_state or st.session_state.current_level != selected_level:
@@ -60,7 +60,7 @@ def render_test_page():
 
     if question_index < len(st.session_state.shuffled_questions):
         question = st.session_state.shuffled_questions[question_index]
-        st.write(f"**Q{question_index + 1}: {question['question']}**")
+        st.markdown(f"**Q{question_index + 1}: {question['question']}**")
 
         options = question["options"]
         selected_option = st.radio("Select your answer:", options, key=f"q{question_index}")
