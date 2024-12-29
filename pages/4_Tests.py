@@ -109,13 +109,8 @@ def render_test_page():
     # Footer
     st.markdown(
         """
-<<<<<<< HEAD
-        <footer style="position: fixed; bottom: 0; width: 100%; background-color: #2c2f33; color: white; text-align: center; padding: st.query_params;">
-            © 2024 YumeLearn Project
-=======
         <footer style="position: fixed; bottom: 0; width: 100%; background-color: #2c2f33; color: white; text-align: center; padding: 10px;">
             © 2024 Suraj Sanap Project
->>>>>>> 07d5ae21deee25dc7b72437039b8cbe4e972c0cc
         </footer>
         """,
         unsafe_allow_html=True,
