@@ -15,7 +15,7 @@ genai.configure(api_key=API_KEY)
 
 def main():
 
-    with open('assets\Teacher1.json', encoding='utf-8') as anim_source:
+    with open('assets/Teacher2.json', encoding='utf-8') as anim_source:
         animation = json.load(anim_source)
         st_lottie(animation, 1, True, True, "high", 200, -200)
 
