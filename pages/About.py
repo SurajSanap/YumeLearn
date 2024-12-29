@@ -62,6 +62,8 @@ with col2:
 # My Projects Section
 st.header("My Projects")
 
+st.divider()
+
 # Define project data
 projects = [
     {
