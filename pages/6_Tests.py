@@ -4,7 +4,7 @@ import json
 import os
 from streamlit_lottie import st_lottie
 
-from app import load_animation
+from Home import load_animation
 
 
 st.set_page_config(page_title="YumeLearn", page_icon="assets/jp9.gif", layout="wide", initial_sidebar_state="expanded")

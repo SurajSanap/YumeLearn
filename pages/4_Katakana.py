@@ -3,7 +3,7 @@ import os
 import json
 from streamlit_lottie import st_lottie
 
-from app import load_animation
+from Home import load_animation
 
 # Directories for Katakana images and audio
 KATAKANA_IMAGE_DIR = "data/Katakana/Background"
