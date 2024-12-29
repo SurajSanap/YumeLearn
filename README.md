@@ -1,4 +1,7 @@
-# Japanese Learning App
+# Japanese Learning App - YumeLearn
+
+![image](https://github.com/user-attachments/assets/98a373f3-11df-4a47-ac0d-313ea568d88c)
+
 
 This is a multi-page **Japanese Learning App** built using Python and Streamlit. The app is designed to help users prepare for the JLPT (Japanese Language Proficiency Test) and NAT-TEST, offering interactive features to learn Hiragana, Katakana, Kanji, and practice listening-based MCQs. Additionally, the app provides a test section mimicking JLPT/NAT-TEST style questions.
 
