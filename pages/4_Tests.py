@@ -18,8 +18,23 @@ def load_questions(level):
         st.error(f"Questions for {level} not found.")
         return []
 
+
 # Render the test page
 def render_test_page():
+
+    # Load and display animation
+    try:
+        animation_path = os.path.join("assets", "SakuraAnimation.json")
+        with open(animation_path, encoding='utf-8') as anim_source:
+            animation_data = json.load(anim_source)
+        st_lottie(animation_data, height=300, key="SakuraAnimation")
+    except FileNotFoundError:
+        st.error("Animation file not found. Ensure 'assets/SakuraAnimation.json' exists.")
+    except UnicodeDecodeError as e:
+        st.error(f"Error decoding JSON: {e}. Try specifying a different encoding.")
+    except Exception as e:
+        st.error(f"An unexpected error occurred: {e}")
+
     st.title("JLPT Practice Test")
 
     # Select JLPT level
@@ -31,19 +46,6 @@ def render_test_page():
 
     if not questions:
         return
-
-    # Display animation
-    try:
-        with open('assets\Test.json', encoding='utf-8') as anim_source:
-            animation_data = json.load(anim_source)
-        st_lottie(animation_data, 1, True, True, "high", 350, -200)
-    except FileNotFoundError:
-        st.error("Animation file not found.")
-    except UnicodeDecodeError as e:
-        st.error(f"Error decoding JSON: {e}. Try specifying a different encoding.")
-    except Exception as e:
-        st.error(f"An error occurred: {e}")
-
 
     # Shuffle questions if not already shuffled
     if "shuffled_questions" not in st.session_state or st.session_state.current_level != selected_level:
@@ -96,15 +98,21 @@ def render_test_page():
                         st.session_state.answers = []
                         st.session_state.score = 0
 
-
+    # Footer
     st.markdown(
         """
+<<<<<<< HEAD
         <footer style="position: fixed; bottom: 0; width: 100%; background-color: #2c2f33; color: white; text-align: center; padding: st.query_params;">
             © 2024 YumeLearn Project
+=======
+        <footer style="position: fixed; bottom: 0; width: 100%; background-color: #2c2f33; color: white; text-align: center; padding: 10px;">
+            © 2024 Suraj Sanap Project
+>>>>>>> 07d5ae21deee25dc7b72437039b8cbe4e972c0cc
         </footer>
         """,
         unsafe_allow_html=True,
     )
+
 
 # Main
 if __name__ == "__main__":
