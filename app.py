@@ -19,9 +19,13 @@ def main():
     except Exception as e:
         st.error(f"An error occurred: {e}")
 
-    # Sidebar with theme toggle and navigation
-    with st.sidebar:
-        st.image("assets/jp9.gif", width=80)
+# Load the animation
+animation_path = "assets/SakuraAnimation.json"
+animation_data = load_animation(animation_path)
+
+with st.sidebar:
+    # Display Lottie animation instead of an image
+    if animation_data:
         btn_face = "🌞" if st.session_state.get("current_theme", "light") == "light" else "🌜"
         if st.button(btn_face, key='unique_theme_toggle'):
             st.session_state["current_theme"] = "dark" if st.session_state.get("current_theme", "light") == "light" else "light"
