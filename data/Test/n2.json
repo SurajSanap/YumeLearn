@@ -1,0 +1,22 @@
+[
+  {
+      "question": "What is the meaning of 会議?",
+      "options": ["Meeting", "Event", "Game", "Party"],
+      "answer": "Meeting"
+  },
+  {
+      "question": "Select the correct Kanji for 'River':",
+      "options": ["山", "川", "田", "林"],
+      "answer": "川"
+  },
+  {
+      "question": "Choose the correct particle: 毎日コーヒー___飲みます。",
+      "options": ["が", "を", "に", "で"],
+      "answer": "を"
+  },
+  {
+      "question": "What does 出張 mean?",
+      "options": ["Business trip", "Vacation", "Meeting", "Lunch break"],
+      "answer": "Business trip"
+  }
+]

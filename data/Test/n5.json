@@ -1,0 +1,22 @@
+[
+  {
+      "question": "Translate the following word to English: 猫",
+      "options": ["Dog", "Cat", "Bird", "Fish"],
+      "answer": "Cat"
+  },
+  {
+      "question": "Choose the correct Kanji for 'Tree':",
+      "options": ["火", "水", "木", "金"],
+      "answer": "木"
+  },
+  {
+      "question": "What does the following word mean: 学生",
+      "options": ["Teacher", "Student", "School", "Library"],
+      "answer": "Student"
+  },
+  {
+      "question": "Select the correct particle: 私___学生です。",
+      "options": ["が", "は", "を", "に"],
+      "answer": "は"
+  }
+]

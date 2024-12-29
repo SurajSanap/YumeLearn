@@ -1,0 +1,22 @@
+[
+  {
+      "question": "What does 料理 mean?",
+      "options": ["Cooking", "Travel", "Shopping", "Exercise"],
+      "answer": "Cooking"
+  },
+  {
+      "question": "Choose the correct Kanji for 'Mountain':",
+      "options": ["海", "山", "川", "田"],
+      "answer": "山"
+  },
+  {
+      "question": "What does 勉強する mean?",
+      "options": ["To study", "To work", "To play", "To rest"],
+      "answer": "To study"
+  },
+  {
+      "question": "Select the correct particle: 本___読むのが好きです。",
+      "options": ["が", "を", "に", "で"],
+      "answer": "を"
+  }
+]

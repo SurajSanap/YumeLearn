@@ -1,0 +1,22 @@
+[
+  {
+      "question": "What is the meaning of 友達?",
+      "options": ["Friend", "Enemy", "Teacher", "Colleague"],
+      "answer": "Friend"
+  },
+  {
+      "question": "Choose the correct particle: 明日___学校に行きます。",
+      "options": ["が", "に", "を", "で"],
+      "answer": "に"
+  },
+  {
+      "question": "Select the correct Kanji for 'Rain':",
+      "options": ["風", "雨", "雪", "雲"],
+      "answer": "雨"
+  },
+  {
+      "question": "What does the word 食べる mean?",
+      "options": ["To eat", "To sleep", "To walk", "To drink"],
+      "answer": "To eat"
+  }
+]
