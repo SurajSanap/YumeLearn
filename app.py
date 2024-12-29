@@ -1,6 +1,7 @@
 import json
 import streamlit as st
 from streamlit_lottie import st_lottie
+import os
 
 # Set page configuration
 st.set_page_config(page_title="YumeLearn", page_icon="assets/jp9.png", layout="wide", initial_sidebar_state="expanded")
@@ -20,19 +21,20 @@ def load_animation(file_path):
 
 # Main function
 def main():
-   
-
     # Display Lottie animation for welcome
     animation_data = load_animation("assets/Animation.json")
     if animation_data:
         st_lottie(animation_data, height=200, key="welcome_animation")
-  
+
     # Center-aligned title using columns
     col1, col2, col3 = st.columns([1, 6, 1])  # Adjust column width ratios
     with col2:  # Center column
-        st.image("assets\YumeLeran Logo.png")
-
-  
+        # Use forward slashes or raw string for the image path
+        logo_path = os.path.join("assets", "YumeLeran Logo.png")
+        if os.path.exists(logo_path):
+            st.image(logo_path)
+        else:
+            st.error(f"Logo not found: {logo_path}")
 
     # Sidebar
     with st.sidebar:
@@ -55,7 +57,6 @@ def main():
         - Exercises to enhance listening comprehension and overall proficiency.
         
         Embark on your language-learning adventure today!
-    
         """)
 
     # Footer
