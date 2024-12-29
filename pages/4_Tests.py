@@ -20,6 +20,17 @@ def load_questions(level):
 
 # Render the test page
 def render_test_page():
+
+    try:
+        with open('assets\SakuraAnimation.json', encoding='utf-8') as anim_source:
+            animation_data = json.load(anim_source)
+        st_lottie(animation_data, 1, True, True, "high", 350, -200)
+    except FileNotFoundError:
+        st.error("Animation file not found.")
+    except UnicodeDecodeError as e:
+        st.error(f"Error decoding JSON: {e}. Try specifying a different encoding.")
+    except Exception as e:
+        st.error(f"An error occurred: {e}")
     st.title("JLPT Practice Test")
 
     # Select JLPT level
@@ -33,16 +44,7 @@ def render_test_page():
         return
 
     # Display animation
-    try:
-        with open('assets\Test.json', encoding='utf-8') as anim_source:
-            animation_data = json.load(anim_source)
-        st_lottie(animation_data, 1, True, True, "high", 350, -200)
-    except FileNotFoundError:
-        st.error("Animation file not found.")
-    except UnicodeDecodeError as e:
-        st.error(f"Error decoding JSON: {e}. Try specifying a different encoding.")
-    except Exception as e:
-        st.error(f"An error occurred: {e}")
+    
 
 
     # Shuffle questions if not already shuffled
