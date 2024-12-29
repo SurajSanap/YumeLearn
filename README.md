@@ -1,9 +1,18 @@
-# Japanese Learning App - YumeLearn
 
-![image](https://github.com/user-attachments/assets/18bdb9e0-53f2-456a-adb6-80cf24873285)
+# YumeLearn
+
+YumeLearn is a multi-page **Japanese Learning App** built using Python and Streamlit. The app is designed to help users master the Japanese language through interactive features, including practice for Hiragana, Katakana, Kanji, listening-based quizzes, and comprehensive test sections.
+
+![image](https://github.com/user-attachments/assets/c305096f-ef2f-4fd4-a08c-78f943e58ac3)
 
 
-This is a multi-page **Japanese Learning App** built using Python and Streamlit. The app is designed to help users prepare for the JLPT (Japanese Language Proficiency Test) and NAT-TEST, offering interactive features to learn Hiragana, Katakana, Kanji, and practice listening-based MCQs. Additionally, the app provides a test section mimicking JLPT/NAT-TEST style questions.
+![Screen Recording 2024-12-30 002557](https://github.com/user-attachments/assets/234528a6-0615-4cb4-908f-b860d99e1f6f)
+
+
+Powered by **OpenAI** and **Gemini**.
+![GoogleGeminiLogo](https://github.com/user-attachments/assets/994a6e39-689b-4e1b-9568-20727d36554a)
+![OpenAiLogo (2)](https://github.com/user-attachments/assets/9b0c486c-4f69-47fc-824d-d36f52e62958)
+
 
 ## Features
 
@@ -12,29 +21,32 @@ This is a multi-page **Japanese Learning App** built using Python and Streamlit.
 - Quizzes to test recognition and writing skills.
 
 ### 2. Kanji Practice
-- Comprehensive Kanji database organized by JLPT levels (N5 to N1).
+- Comprehensive Kanji database organized by proficiency levels.
 - Practice sessions focusing on meanings, readings (On’yomi and Kun’yomi), and stroke order.
 
-### 3. Listening-based MCQs
+### 3. Listening-based Quizzes
 - Real audio clips to practice listening comprehension.
 - Multiple-choice questions with feedback on correct answers.
 
-### 4. JLPT/NAT-TEST Style Test Section
-- Simulated test environments to practice JLPT-style questions.
-- Scoring system to evaluate user performance.
+### 4. Custom Test Section
+- Simulated test environments to assess user proficiency.
+- Scoring system to evaluate performance.
 
 ## Technology Stack
 - **Programming Language**: Python
 - **Framework**: Streamlit
-- **UI Components**: Streamlit Widgets, Charts, and Tables
-- **Database**: CSV files or SQLite (depending on data size)
+- **APIs Used**:
+  - OpenAI GPT-3.5-Turbo for chatbot and language-related tasks.
+  - Google Gemini for generative AI capabilities.
+- **UI Components**: Streamlit Widgets, Charts, and Tables.
+- **Database**: CSV files or SQLite (depending on data size).
 
 ## Installation Guide
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/your-username/japanese-learning-app.git
-   cd japanese-learning-app
+   git clone https://github.com/your-username/yumelearn.git
+   cd yumelearn
    ```
 
 2. **Install Dependencies**:
@@ -48,7 +60,7 @@ This is a multi-page **Japanese Learning App** built using Python and Streamlit.
    ```
 
 4. **Access the Application**:
-   Open the link provided in the terminal (usually http://localhost:8501) to use the app.
+   Open the link provided in the terminal (usually [http://localhost:8501](http://localhost:8501)) to use the app.
 
 ## Data Sources
 
@@ -59,15 +71,13 @@ The application utilizes data from the following reliable resources:
    - Source: [Wikipedia Katakana](https://en.wikipedia.org/wiki/Katakana)
 
 2. **Kanji Data**:
-   - JLPT Kanji Lists: [JLPT Sensei](https://jlptsensei.com/jlpt-kanji-list/)
+   - Kanji Lists: [Kanji Alive](https://kanjialive.com/)
    - Stroke Order and Readings: [Kanji Alive](https://kanjialive.com/)
 
 3. **Listening Audio Clips**:
-   - JLPT Practice: [JapanesePod101](https://www.japanesepod101.com/)
-   - NAT-TEST Examples: Official NAT-TEST resources
+   - JapanesePod101: [JapanesePod101](https://www.japanesepod101.com/)
 
-4. **JLPT/NAT-TEST Practice Questions**:
-   - Practice Papers: [JLPT Official Practice Workbook](https://www.jlpt.jp/e/samples/sample12.html)
+4. **Practice Questions**:
    - Online Mock Tests: [Nihongo-Pro](https://www.nihongo-pro.com/)
 
 ## Contribution Guidelines
@@ -90,41 +100,16 @@ The application utilizes data from the following reliable resources:
 4. Create a pull request and explain your changes.
 
 ## License
+
 This project is licensed under the MIT License. See the `LICENSE` file for more details.
 
 ## Contact
+
 For any questions or suggestions, please contact:
-- **Email**: surajsanapcontact@example.com
-- **GitHub**: [SurajSanap](https://github.com/SurajSanap)
+- **Email**: [your-email@example.com](mailto:surajsanapcontact@gmail.com)
+- **GitHub**: [your-username](https://github.com/surajsanap)
 
 ---
 
-Happy learning! 🌐
+Happy learning with YumeLearn! 🌐
 
-
-
-### How to get OpenAi-API
-1. Check Your OpenAI API Quota
-Log in to your OpenAI account: OpenAI Account Dashboard.
-Verify your usage and remaining quota.
-If you've reached your free trial or paid usage limit, consider upgrading your plan or adding credits.
-2. Upgrade Your Plan
-Visit the OpenAI Billing Page.
-Upgrade your plan or add payment information to purchase additional credits.
-3. Reduce Token Consumption
-If you want to minimize the cost of requests, reduce the max_tokens parameter in your API call. For example:
-
-python
-Copy code
-response = openai.ChatCompletion.create(
-    model="gpt-3.5-turbo",
-    messages=messages,
-    max_tokens=500  # Adjust to a lower value
-)
-4. Test with a New API Key
-If the issue persists and you suspect a problem with your current key, generate a new API key:
-
-Go to the API Keys Page.
-Create a new key and update your .env file.
-5. Retry Later
-If you are on a free trial or have daily limits, wait until your quota resets (usually after 24 hours).
