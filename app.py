@@ -2,49 +2,54 @@ import json
 import streamlit as st
 from streamlit_lottie import st_lottie
 
+# Set page configuration
 st.set_page_config(page_title="YumeLearn", page_icon="assets/jp9.gif", layout="wide", initial_sidebar_state="expanded")
 
-def main():
-    # Display title and welcome image
-    st.title("Welcome to YumeLearn!")
-    
-
-    # Display animation using Lottie
+# Function to load Lottie animations
+def load_animation(file_path):
     try:
-        with open('assets/Animation.json', encoding='utf-8') as anim_source:
-            animation_data = json.load(anim_source)
-        st_lottie(animation_data, height=200, key="welcome_animation")
+        with open(file_path, encoding='utf-8') as anim_source:
+            return json.load(anim_source)
     except FileNotFoundError:
-        st.error("Animation file not found.")
+        st.error(f"Animation file not found: {file_path}")
+    except json.JSONDecodeError as e:
+        st.error(f"Error decoding JSON: {e}")
     except Exception as e:
-        st.error(f"An error occurred: {e}")
+        st.error(f"An unexpected error occurred: {e}")
+    return None
 
-# Load the animation
-animation_path = "assets/SakuraAnimation.json"
-animation_data = load_animation(animation_path)
+# Main function
+def main():
+    # Display title
+    st.title("Welcome to YumeLearn!")
 
-with st.sidebar:
-    # Display Lottie animation instead of an image
+    # Display Lottie animation for welcome
+    animation_data = load_animation("assets/Animation.json")
     if animation_data:
+        st_lottie(animation_data, height=200, key="welcome_animation")
+
+    # Sidebar
+    with st.sidebar:
+        # Load and display Lottie animation in sidebar
+        sidebar_animation = load_animation("assets/SakuraAnimation.json")
+        if sidebar_animation:
+            st_lottie(sidebar_animation, height=80, key="sidebar_animation")
+
+        # Theme toggle button
         btn_face = "🌞" if st.session_state.get("current_theme", "light") == "light" else "🌜"
         if st.button(btn_face, key='unique_theme_toggle'):
             st.session_state["current_theme"] = "dark" if st.session_state.get("current_theme", "light") == "light" else "light"
 
-        # tabs = st.radio(
-        #     "Navigation",
-        #     options=["Home", "Hiragana", "Katakana", "Kanji"],
-        #     index=0,
-        # )
-
-        # menu = {
-        #     "Home": lambda: st.write("Welcome to the Home Page!"),
-        #     "Hiragana": lambda: st.write("Navigate to Hiragana Practice"),
-        #     "Katakana": lambda: st.write("Navigate to Katakana Practice"),
-        #     "Kanji": lambda: st.write("Navigate to Kanji Practice"),
-        # }
-
-        # if tabs in menu:
-        #     menu[tabs]()
+        # Sidebar information
+        st.markdown("""
+        ## About YumeLearn
+        This app helps you prepare for the **JLPT** (Japanese Language Proficiency Test) with:
+        - Interactive Hiragana, Katakana, and Kanji practice.
+        - Vocabulary and grammar lessons tailored to your JLPT level.
+        - Listening comprehension exercises and mock tests.
+        
+        Start your journey today and achieve your language learning goals!
+        """)
 
     # Footer
     st.markdown(
@@ -55,15 +60,6 @@ with st.sidebar:
         """,
         unsafe_allow_html=True,
     )
-    st.markdown("""
-    This app helps you prepare for the **JLPT** (Japanese Language Proficiency Test) with:
-    - Interactive Hiragana, Katakana, and Kanji practice.
-    - Vocabulary and grammar lessons tailored to your JLPT level.
-    - Listening comprehension exercises and mock tests.
-    
-    Start your journey today and achieve your language learning goals!
-    """)
-    st.image("assets/welcome_image.png", use_container_width=True)
 
 if __name__ == "__main__":
     main()
