@@ -25,7 +25,7 @@ Hi! I'm
         <span style="color: orange;">Suaj Sanap,</span>
         </p>
         a passionate developer with expertise in **AI**, **Machine Learning**, and building web applications. 
-I love solving real-world problems using innovative technologies. Here are some of my most exciting projects!
+I love solving real-world problems using innovative technologies.
 """, 
     unsafe_allow_html=True)
 
