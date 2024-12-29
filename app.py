@@ -3,7 +3,7 @@ import streamlit as st
 from streamlit_lottie import st_lottie
 
 # Set page configuration
-st.set_page_config(page_title="YumeLearn", page_icon="assets/jp9.gif", layout="wide", initial_sidebar_state="expanded")
+st.set_page_config(page_title="YumeLearn", page_icon="assets/jp9.png", layout="wide", initial_sidebar_state="expanded")
 
 # Function to load Lottie animations
 def load_animation(file_path):
