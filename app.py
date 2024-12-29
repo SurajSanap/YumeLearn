@@ -43,12 +43,13 @@ def main():
         # Sidebar information
         st.markdown("""
         ## About YumeLearn
-        This app helps you prepare for the **JLPT** (Japanese Language Proficiency Test) with:
-        - Interactive Hiragana, Katakana, and Kanji practice.
-        - Vocabulary and grammar lessons tailored to your JLPT level.
-        - Listening comprehension exercises and mock tests.
+        This app provides tools to master the Japanese language through:
+        - Interactive practice with Hiragana, Katakana, and Kanji.
+        - Vocabulary and grammar lessons designed to improve your language skills.
+        - Exercises to enhance listening comprehension and overall proficiency.
         
-        Start your journey today and achieve your language learning goals!
+        Embark on your language-learning adventure today!
+    
         """)
 
     # Footer
