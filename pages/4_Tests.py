@@ -43,6 +43,7 @@ def render_test_page():
         st.error(f"Error decoding JSON: {e}. Try specifying a different encoding.")
     except Exception as e:
         st.error(f"An error occurred: {e}")
+        
 
     # Shuffle questions if not already shuffled
     if "shuffled_questions" not in st.session_state or st.session_state.current_level != selected_level:
