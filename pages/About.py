@@ -19,10 +19,15 @@ except Exception as e:
 # About Me Section
 st.title("About Me")
 
-st.markdown("""
-Hi! I'm **Suraj Sanap**, a passionate developer with expertise in **AI**, **Machine Learning**, and building web applications. 
+st.write("""
+Hi! I'm 
+        <p style="font-size: 24px; font-weight: bold;">
+        <span style="color: orange;">Suaj Sanap</span>
+        </p>
+        a passionate developer with expertise in **AI**, **Machine Learning**, and building web applications. 
 I love solving real-world problems using innovative technologies. Here are some of my most exciting projects!
-""")
+""", 
+    unsafe_allow_html=True)
 
 # Define URLs for GitHub and LinkedIn
 github_url = "https://github.com/SurajSanap"
@@ -114,11 +119,12 @@ for project in projects:
 #Side Bar
 
 
-st.markdown("### Connect with me:")
+
 
 # Buttons for GitHub and LinkedIn
 with st.sidebar:
     st.image("assets/SRS.png")
+
     
     if st.button("GitHub"):
         st.write(f"Redirecting to [GitHub Profile]({github_url})...")
