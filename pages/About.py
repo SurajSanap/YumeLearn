@@ -22,7 +22,7 @@ st.title("About Me")
 st.write("""
 Hi! I'm 
         <p style="font-size: 24px; font-weight: bold;">
-        <span style="color: orange;">Suaj Sanap</span>
+        <span style="color: orange;">Suaj Sanap,</span>
         </p>
         a passionate developer with expertise in **AI**, **Machine Learning**, and building web applications. 
 I love solving real-world problems using innovative technologies. Here are some of my most exciting projects!
@@ -125,7 +125,7 @@ for project in projects:
 with st.sidebar:
     st.image("assets/SRS.png")
 
-    
+
     if st.button("GitHub"):
         st.write(f"Redirecting to [GitHub Profile]({github_url})...")
         st.query_params(url=github_url)
