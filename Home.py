@@ -63,7 +63,9 @@ def main():
             
             # Display service description
             st.markdown(service["description"])
-    
+
+
+    st.divider()
     # Sidebar
     with st.sidebar:
         # Load and display Lottie animation in sidebar
