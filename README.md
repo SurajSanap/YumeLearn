@@ -1,6 +1,4 @@
-
-# YumeLearn
-## Powered by **OpenAI** and **Gemini**.
+# YumeLearn 🌸
 
 YumeLearn is a multi-page **Japanese Learning App** built using Python and Streamlit. The app is designed to help users master the Japanese language through interactive features, including practice for Hiragana, Katakana, Kanji, listening-based quizzes, and comprehensive test sections. 
 
