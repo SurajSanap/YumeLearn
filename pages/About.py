@@ -22,9 +22,9 @@ st.title("About Me")
 st.write("""
 Hi! I'm 
         <p style="font-size: 24px; font-weight: bold;">
-        <span style="color: orange;">Suaj Sanap,</span>
+        <span style="color: orange;">Suraj Sanap,</span>
         </p>
-        a passionate developer with expertise in **AI**, **Machine Learning**, and building web applications. 
+        A passionate developer with expertise in **AI**, **Machine Learning**, and building web applications. 
 I love solving real-world problems using innovative technologies.
 """, 
     unsafe_allow_html=True)

@@ -103,8 +103,8 @@ This project is licensed under the MIT License. See the `LICENSE` file for more 
 ## Contact
 
 For any questions or suggestions, please contact:
-- **Email**: [your-email@example.com](mailto:surajsanapcontact@gmail.com)
-- **GitHub**: [your-username](https://github.com/surajsanap)
+- **Email**: [surajsanapcontact@gmail.com](mailto:surajsanapcontact@gmail.com)
+- **GitHub**: [SurajSanap](https://github.com/surajsanap)
 
 ---
 
