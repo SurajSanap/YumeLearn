@@ -151,15 +151,15 @@ def main():
     col1, col2, col3, col4, col5 = st.columns([1, 1, 1, 1, 1])
 
     with col1:
-        st.image("assets/GoogleGeminiLogo.png", caption="Google Gemini", width=200)
+        st.image("assets/GoogleGeminiLogo.png",  width=200)
     with col2:
         st.write("<h1><center>|</center></h1>", unsafe_allow_html=True)
     with col3:
-        st.image("assets/OpenAiLogo.png", caption="OpenAI", width=200)
+        st.image("assets/OpenAiLogo.png", width=200)
     with col4:
         st.write("<h1><center>|</center></h1>", unsafe_allow_html=True)
     with col5:
-        st.image("assets/StremlitLogo.png", caption="Stremlit", width=200)
+        st.image("assets/StremlitLogo.png", width=200)
 
     # Footer
     st.markdown(
