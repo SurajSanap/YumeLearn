@@ -28,17 +28,17 @@ def main():
     if animation_data:
         st_lottie(animation_data, height=200, key="welcome_animation_main")
 
-    st.title("Welcome to YumeLeran")
+  
 
-    # Center-aligned title using columns
-    # col1, col2, col3 = st.columns([1, 6, 1])  # Adjust column width ratios
-    # with col2:  # Center column
-    #     # Use forward slashes or raw string for the image path
-    #     logo_path = os.path.join("assets", "YumeLeran Logo.png")
-    #     if os.path.exists(logo_path):
-    #         st.image(logo_path)
-    #     else:
-    #         st.error(f"Logo not found: {logo_path}")
+    Center-aligned title using columns
+    col1, col2, col3 = st.columns([1, 6, 1])  # Adjust column width ratios
+    with col2:  # Center column
+        # Use forward slashes or raw string for the image path
+        logo_path = os.path.join("assets", "YumeLeran Logo.png")
+        if os.path.exists(logo_path):
+            st.image(logo_path)
+        else:
+            st.error(f"Logo not found: {logo_path}")
 
     # Services Section
     st.markdown("<h2 style='text-align: center;'>Our Services</h2>", unsafe_allow_html=True)
