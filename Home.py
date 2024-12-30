@@ -22,7 +22,7 @@ def load_animation(file_path):
 # Main function
 def main():
 
-    st.title(Wlcome to YumeLeran)
+    st.title("Welcome to YumeLeran")
     # Display Lottie animation for welcome
     animation_data = load_animation("assets/Animation.json")
     if animation_data:
