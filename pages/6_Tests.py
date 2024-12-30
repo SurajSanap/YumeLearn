@@ -17,7 +17,7 @@ def load_questions(level):
 # Render the test page
 def render_test_page():
     try:
-        with open('assets\Exam.json', encoding='utf-8') as anim_source:
+        with open('assets/Exam.json', encoding='utf-8') as anim_source:
             animation_data = json.load(anim_source)
         st_lottie(animation_data, 1, True, True, "high", 350, -200)
     except FileNotFoundError:
