@@ -21,16 +21,12 @@ def load_animation(file_path):
 
 # Main function
 def main():
-
-    
     # Display Lottie animation for welcome
     animation_data = load_animation("assets/Animation.json")
     if animation_data:
         st_lottie(animation_data, height=200, key="welcome_animation_main")
 
-  
-
-    Center-aligned title using columns
+    # Center-aligned title using columns
     col1, col2, col3 = st.columns([1, 6, 1])  # Adjust column width ratios
     with col2:  # Center column
         # Use forward slashes or raw string for the image path
@@ -63,9 +59,7 @@ def main():
             
             # Display service description
             st.markdown(service["description"])
-
-
-    st.divider()
+    
     # Sidebar
     with st.sidebar:
         # Load and display Lottie animation in sidebar
