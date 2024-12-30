@@ -140,7 +140,7 @@ def main():
         """)
 
     st.markdown("<div class='spacing'></div>", unsafe_allow_html=True)
-     st.divider()
+    st.divider()
 
 
 
