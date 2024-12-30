@@ -22,11 +22,13 @@ def load_animation(file_path):
 # Main function
 def main():
 
-    st.title("Welcome to YumeLeran")
+    
     # Display Lottie animation for welcome
     animation_data = load_animation("assets/Animation.json")
     if animation_data:
         st_lottie(animation_data, height=200, key="welcome_animation_main")
+
+    st.title("Welcome to YumeLeran")
 
     # Center-aligned title using columns
     # col1, col2, col3 = st.columns([1, 6, 1])  # Adjust column width ratios
