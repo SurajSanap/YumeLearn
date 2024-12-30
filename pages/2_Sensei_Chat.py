@@ -58,7 +58,7 @@ def main():
     st.markdown(
         """
         <footer style="position: fixed; bottom: 0; width: 90%; background-color: #332242; color: white; text-align: center; padding: 10px;">
-            © 2024 YumeLearn Project
+            © 2025 YumeLearn Project
         </footer>
         """,
         unsafe_allow_html=True,

@@ -110,7 +110,7 @@ def render_test_page():
     st.markdown(
         """
         <footer style="position: fixed; bottom: 0; width: 100%; background-color: #2c2f33; color: white; text-align: center; padding: 10px;">
-            © 2024 Suraj Sanap Project
+            © 2025 Suraj Sanap Project
         </footer>
         """,
         unsafe_allow_html=True,
