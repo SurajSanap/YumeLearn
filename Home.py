@@ -87,7 +87,8 @@ def main():
 
     # Add spacing between logo and services
     st.markdown("<div class='spacing'></div>", unsafe_allow_html=True)
-
+    st.divider()
+    st.markdown("<div class='spacing'></div>", unsafe_allow_html=True)
     # Services Section
     st.write("<h1><center>Our Services</center></h1>", unsafe_allow_html=True)
 
