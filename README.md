@@ -1,5 +1,5 @@
 # YumeLearn 
-YumeLearn is a multi-page **Japanese Learning App** built using Python and Streamlit. The app is designed to help users master the Japanese language through interactive features, including practice for Hiragana, Katakana, Kanji, listening-based quizzes, and comprehensive test sections. 
+YumeLearn is a Ai powered **Japanese Learning App** built using Python and Streamlit. The app is designed to help users master the Japanese language through interactive features, including practice for Hiragana, Katakana, Kanji, listening-based quizzes, and comprehensive test sections. 
 
 ![Screen Recording 2025-12-30 002557](https://github.com/user-attachments/assets/234528a6-0615-4cb4-908f-b860d99e1f6f)
 
