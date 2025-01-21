@@ -154,6 +154,7 @@ def main():
         st.image("assets/GoogleGeminiLogo.png",  width=200)
     with col2:
         st.write("<h1><center>|</center></h1>", unsafe_allow_html=True)
+        
     with col3:
         st.image("assets/OpenAiLogo.png", width=200)
     with col4:
