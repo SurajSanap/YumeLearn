@@ -14,7 +14,7 @@ from streamlit_lottie import st_lottie
 
 # Animation Section
 try:
-    with open('assets\Library.json', encoding='utf-8') as anim_source:
+    with open('assets/Library.json', encoding='utf-8') as anim_source:
         animation_data = json.load(anim_source)
         st_lottie(animation_data, height=200, key="About")
 except FileNotFoundError:
