@@ -1,0 +1,99 @@
+Adjective | Kanji | Meaning
+あおい | 青い | blue 💙
+あかい | 赤い | red ❤️
+あかるい | 明るい | bright 💡
+あさい | 浅い | shallow 🏝
+あたらしい | 新しい | new 🎬
+あたたかい | 暖かい | warm (weather) 🌤
+あたたかい | 温かい | warm (object) 🍜
+あつい | 厚い | thick 📘
+あつい | 暑い | hot (weather) ☀️🥵
+あつい | 熱い | hot (object) 🍲
+あまい | 甘い | sweet 🍫
+あぶない | 危ない | dangerous ⚠️
+いい/よい | 良い | good 👏🏻
+いそがしい | 忙しい | busy 😱
+いたい | 痛い | painful 💉
+いろいろな | 色々な | various
+いやな | 嫌な | horrible, dislike* 😖
+うるさい | - | noisy 🚧
+うすい | 薄い | thin 📔
+おおい | 多い | many 👥
+おいしい | 美味しい | tasty 🍩
+おおきい | 大きい | big 🐘
+おそい | 遅い | slow 🐢
+おもい | 重い | heavy 🦛
+おもしろい | 面白い | interesting, funny 🧐😆
+かっこいい | 格好良い | cool 😎
+かなしい | 悲しい | sad 😭
+からい | 辛い | spicy, salt 🥵
+かるい | 軽い | light 🪶
+かわいい | 可愛い | cute 🐶
+かんたんな | 簡単な | easy 🍳
+きいろい | - | yellow 💛
+きたない | 汚い | dirty
+きびしい | 厳しい | harsh 👨🏻‍🏫
+きらいな | 嫌いな | dislike
+きれいな | 綺麗な | clean, beautiful 🌅
+くらい | 暗い | dark ▓
+くろい | 黒い | black 🖤
+けっこうな | 結構な | fine*
+げんきな | 元気な | cheerful, energetic 💪🏻
+さびしい | 寂しい | lonely 😔
+さむい | 寒い | cold (weather) ❄️
+しずかな | 静かな | quiet 🤫
+じょうぶな | 丈夫な | healthy, strong
+じょうずな | 上手な | good at 👍🏻
+しろい | 白い | white 🦷
+しんせつな | 親切な | kind 😊
+すきな | 好きな | favorite, like* 💓
+すくない | 少ない | few 🦄
+すっぱい | 酸っぱい | sour 🍋
+すずしい | 涼しい | cool 🍃
+すばらしい | 素晴らしい | great 💗
+せまい | 狭い | narrow 🏠
+だいきらいな | 大嫌いな | hatred, hate* 🤬
+だいじょうぶな | 大丈夫 | fine* 😀
+だいすきな | 大好き | favorite, love ❤️‍🔥
+たいへんな | 大変な | terrible 🤦🏻‍♀️
+たいせつな | 大切な | important
+たかい | 高い | high, tall 🏔
+たのしい | 楽しい | fun 🥳
+ちいさい | 小さい | small 🐜
+ちかい | 近い | close 👟
+つまらない | - | boring 😶
+つめたい | 冷たい | cold (object) 🥶
+つよい | 強い | strong 🦹🏻‍♀️
+とおい | 遠い | far ✈️
+とくいな | 得意な | good at 👍🏻
+ながい | 長い | long 📏
+にがい | 苦い | bitter ☕️
+にぎやかな | 賑やか | lively 🏬
+にがてな | 苦手な | bad at 👎🏻
+ぬるい | 温い | lukewarm 💧
+はやい | 早い | early 🌞
+はやい | 速い | fast 🚅
+ひくい | 低い | low, short 👶🏻
+ひつような | 必要な | necessary
+ひまな | 暇な | not busy 🧘🏻‍♀️
+ひろい | 広い | wide 🔭
+ふかい | 深い | deep 🌊
+ふとい | 太い | fat 🐷
+ふるい | 古い | old (object) 🏚
+へたな | 下手な | bad at 👎🏻
+べんりな | 便利な | convenient 🏪
+ほしい | 欲しい | want* ❤️‍🔥
+ほそい | 細い | thin 🦩
+まるい | 丸い | round 🟡
+まっすぐ | 真っ直ぐ | straight 🚙
+まずい | 不味い | bad (taste, situation) 👎🏻
+みじかい | 短い | short (length) 👖
+むずかしい | 難しい | difficult 🤯
+ゆうめいな | 有名な | famous
+やさしい | 易しい | easy 🍳
+やさしい | 優しい | gentle, kind 😌
+やすい | 安い | cheap 🍬
+よわい | 弱い | weak 😷
+りっぱな | 立派な | splendid 🏯
+わかい | 若い | young 👧🏻
+わるい | 悪い | bad 🙅🏻‍♀️
